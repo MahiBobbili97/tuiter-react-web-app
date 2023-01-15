@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Welcome to Web Development Fall 2022
+        Welcome to Web Development Fall 2023
         </p>
 		<center>Mahi</center>
       </header>
