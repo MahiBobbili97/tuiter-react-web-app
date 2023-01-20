@@ -7,10 +7,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Welcome to Web Development Spring 2023
+        This is just a test text(app.js)
         </p>
 		<center>Mahi</center>
-		<br>
       </header>
     </div>
   );
