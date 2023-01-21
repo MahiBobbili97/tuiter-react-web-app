@@ -9,6 +9,7 @@ function App() {
         <p>
         This is just a test text(app.js)
         </p>
+        <center>Test A2</center>
 		<center>Mahi</center>
       </header>
     </div>
