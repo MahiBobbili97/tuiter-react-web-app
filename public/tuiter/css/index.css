@@ -1,0 +1,40 @@
+
+.wd-rounded {
+  border-radius: 25px;
+  color:white;
+  
+  background-color:#A9A9A9
+
+}
+
+body {
+  background:black;
+}
+.wd-table{
+font-size: 15px;
+  padding: 16px;
+  color: rgb(110, 118, 125);
+}
+.wd-highlighted{
+color: rgb(29,161,242);
+}
+.wd-text-link{
+color: rgb(110, 118, 125);}
+
+.wd-topic{
+color: rgb(110, 118, 125);
+font-size:13px;
+}
+.wd-title{
+font-size: 15px;
+color:white;
+}
+.wd-img{
+float:right;
+border-radius: 25px
+}
+.wd-Author{
+color:white;}
+.wd-Post{
+color:white;}
+
