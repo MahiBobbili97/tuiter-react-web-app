@@ -1,0 +1,104 @@
+body {
+  background:black;
+  border-color:rgb(47, 51, 54);
+  border: 2px solid gray;
+  margin-left:16px;
+}
+
+.wd-bookmarks
+{
+margin-left:16px;
+margin-top:12px;
+font-size: 20px;
+color:white;
+}
+
+.wd-handle
+{
+margin-left:12px;
+margin-top:16px;
+font-size: 13px;
+color: rgb(110, 118, 125);
+}
+
+.wd-avatar
+{
+margin-left:12px;
+margin-top:16px;
+font-size: 12px;
+border-radius: 50%;
+}
+
+.wd-author
+{
+margin-left:12px;
+margin-top:12px;
+font-size: 15px;
+color: white;
+display: inline-block;
+}
+
+.wd-author-handle
+{
+color: rgb(110, 118, 125);
+display: inline-block;
+}
+.wd-main-content{
+color:white;
+margin-left:16px;
+font-size: 15px;
+word-wrap:break-word;
+width:506px;
+margin-top:12px;
+}
+
+.wd-img-main
+{
+margin-left:12px;
+margin-top:12px;
+border-radius: 30px 30px 0px 0px;
+border: 1px solid rgb(110, 118, 125);
+display: block
+}
+
+.wd-img-below-title
+{
+margin-left:12px;
+margin-top:12px;
+color:white;
+padding: 12px 12px 12px 12px;
+display: block
+}
+.wd-img-below-content
+{
+margin-left:12px;
+width:504px;
+color:rgb(110, 118, 125);
+padding: 12px 12px 12px 12px;
+display: block
+}
+
+.wd-border-div
+{
+margin-left:12px;
+width:504px;
+word-wrap:break-word;
+border: 1px solid rgb(110, 118, 125);
+border-radius: 0px 0px 30px 30px;
+display: block
+}
+
+.wd-icons{
+margin-top:12px;
+margin-left:5%;
+margin-bottom:16px;
+}
+
+.wd-icons a{
+color: inherit;
+}
+
+.wd-img-dots{
+float:right;
+border-radius: 25px;font-size:28px;color:lightblue; margin-right:20px;
+}

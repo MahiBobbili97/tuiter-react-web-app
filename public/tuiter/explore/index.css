@@ -2,13 +2,17 @@
 .wd-rounded {
   border-radius: 25px;
   color:white;
-  
+margin-top:10px;
+margin-left:35px;
   background-color:#A9A9A9
 
 }
 
 body {
   background:black;
+  margin-left:16px;
+    border-color:rgb(47, 51, 54);
+    border: 2px solid gray;
 }
 .wd-table{
 font-size: 15px;
@@ -31,10 +35,13 @@ color:white;
 }
 .wd-img{
 float:right;
-border-radius: 25px
+border-radius: 25px;
+margin-right:12px;
+margin-top:8px;
 }
 .wd-Author{
 color:white;}
 .wd-Post{
 color:white;}
+
 
