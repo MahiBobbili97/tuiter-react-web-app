@@ -3,6 +3,7 @@ body {
   border-color:rgb(47, 51, 54);
   border: 2px solid gray;
   margin-left:16px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .wd-bookmarks
@@ -16,9 +17,8 @@ color:white;
 .wd-handle
 {
 margin-left:12px;
-margin-top:16px;
 font-size: 13px;
-color: rgb(110, 118, 125);
+color: rgb(110, 118, 125);margin-bottom:12px;
 }
 
 .wd-avatar
