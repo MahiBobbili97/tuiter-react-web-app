@@ -9,6 +9,7 @@ margin-left:35px;
 }
 
 body {
+font-family: "Segoe UI", Arial, sans-serif;
   background:black;
   margin-left:16px;
     border-color:rgb(47, 51, 54);
@@ -44,4 +45,8 @@ color:white;}
 .wd-Post{
 color:white;}
 
-
+.wd-img-dots{
+float:right;
+border-radius: 25px;font-size:28px;color:gray;
+margin-right:12px;
+}
