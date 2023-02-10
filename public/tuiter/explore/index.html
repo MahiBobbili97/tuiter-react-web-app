@@ -12,33 +12,249 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .has-search .form-control {
+    padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+
+}
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .sidebar-text {
+    display: none;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .sidebar-right {
+    display: none;
+  }
+}
+
+
+    </style>
 </head>
 <body>
 
-<div class="d-block d-sm-none fa-2x">XS</div>
-<div class="d-none d-sm-block d-md-none fa-2x">S</div>
-<div class="d-none d-md-block d-lg-none fa-2x">M</div>
-<div class="d-none d-lg-block d-xl-none fa-2x">L</div>
-<div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
-<div class="d-none d-xxl-block fa-2x">XXL</div>
+<div class="container">
+    <div class="d-block d-sm-none fa-2x">XS</div>
+    <div class="d-none d-sm-block d-md-none fa-2x">S</div>
+    <div class="d-none d-md-block d-lg-none fa-2x">M</div>
+    <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
+    <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
+    <div class="d-none d-xxl-block fa-2x">XXL</div>
 
-<div class="row">
-    <div class="col-2">
-        <ul class="list-group">
-            <li class="list-group-item"><i class="fa-brands fa-square-twitter"></i></li>
-            <li class="list-group-item"><i class="fa-solid fa-house-chimney"></i> Home</li>
-            <li class="list-group-item active"><i class="fa-solid fa-hashtag"></i> Explore</li>
-            <li class="list-group-item"><i class="fa-solid fa-bell"></i> Notifications</li>
-            <li class="list-group-item"> <i class="fa-solid fa-envelope"></i> Messages</li>
-            <li class="list-group-item"><i class="fa-solid fa-bookmark"></i> Bookmarks</li>
-            <li class="list-group-item"><i class="fa-solid fa-list-ul"></i> Lists</li>
-            <li class="list-group-item"><i class="fa-solid fa-user"></i> Profile</li>
-            <li class="list-group-item"><i class="fa fa-image"></i> More</li>
-        </ul></div>
-    <div class="col-8">
-        <h3>Main content</h3></div>
-    <div class="col-2">
-        <h3>Sidebar</h3></div></div>
+    <div class="row">
+        <div class="col-2 sidebar-left">
+            <ul class="list-group">
+                <li class="list-group-item"><i class="fa-brands fa-square-twitter"></i></li>
+                <li class="list-group-item"><i class="fa-solid fa-house-chimney"></i>&nbsp<span class="sidebar-text">Home</span>
+                </li>
+                <li class="list-group-item active"><i class="fa-solid fa-hashtag"></i>&nbsp<span class="sidebar-text">Explore</span>
+                </li>
+                <li class="list-group-item"><i class="fa-solid fa-bell"></i>&nbsp<span class="sidebar-text">Notifications</span>
+                </li>
+                <li class="list-group-item"><i class="fa-solid fa-envelope"></i>&nbsp<span
+                        class="sidebar-text">Messages</span></li>
+                <li class="list-group-item"><i class="fa-solid fa-bookmark"></i>&nbsp<span class="sidebar-text">Bookmarks</span>
+                </li>
+                <li class="list-group-item"><i class="fa-solid fa-list-ul"></i>&nbsp<span
+                        class="sidebar-text">Lists</span></li>
+                <li class="list-group-item"><i class="fa-solid fa-user"></i>&nbsp<span
+                        class="sidebar-text">Profile</span></li>
+                <li class="list-group-item"><i class="fa fa-image"></i>&nbsp<span class="sidebar-text">More</span></li>
+            </ul>
+            <div class="col-xs-12" style="height:10px;"></div>
 
+            <div class="row">
+                <button class="btn btn-primary btn-block" style="border-radius:25px;">Tweet</button>
+            </div>
+
+        </div>
+        <div class="col-6 main">
+            <div class="row">
+                <div class="col-10">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" style="border-radius:25px;">
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <a href="explore-settings.html"><i style='font-size:28px;color:#0099ff'
+                                                       class="fa-solid fa-gear wd-img"></i></a>
+                </div>
+
+            </div>
+            <div class="col-xs-12" style="height:10px;"></div>
+
+            <ul class="nav nav-tabs nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">For you</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Entertainment</a>
+                </li>
+            </ul>
+            <div class="col-xs-12" style="height:10px;"></div>
+            <div class="card">
+                <img src="images/students.jpg"
+                     class="card-img-top" alt="...">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="card-body"><img class="image-wrapper float-end w-25 h-25 p-3 "
+                                                    src="images/react.jpg"/>
+                            Web Development
+                            <h5 class="card-title font-weight-bold">ReactJS &nbsp<i
+                                    class="fa-regular fa-circle-check"></i> - 2h</h5>
+                            <p class="card-text font-weight-bold">
+                                React.js is a component based front end library that makes it very easy to build Single
+                                Page Applications or SPAs</p>
+
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="card-body"><img class="image-wrapper float-end w-25 h-25 p-3 " src="images/js.png"/>
+                            <h5 class="card-title font-weight-bold">JavaScript &nbsp<i
+                                    class="fa-regular fa-circle-check"></i> - 2h</h5>
+                            <p class="card-text font-weight-bold">
+                                JavaScript is a programming language that can run on browsers as well as desktops</p>
+                            123k Tweets
+
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="card-body"><img class="image-wrapper float-end w-25 h-25 p-3 "
+                                                    src="images/jquery.png"/>
+                            Web Development
+                            <h5 class="card-title font-weight-bold">jQuery &nbsp<i
+                                    class="fa-regular fa-circle-check"></i> - 2h</h5>
+                            <p class="card-text font-weight-bold">
+                            </p>123k Tweets
+
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="card-body"><img class="image-wrapper float-end w-25 h-25 p-3 "
+                                                    src="images/nodejs.png"/>
+                            Web Development
+                            <h5 class="card-title font-weight-bold">NodeJs &nbsp<i
+                                    class="fa-regular fa-circle-check"></i> - 2h</h5>
+                            <p class="card-text font-weight-bold">
+                            </p>123k Tweets
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
+        <div class="col-xl-4 sidebar-right">
+            <ul class="list-group">
+                <li class="list-group-item">Who to follow</li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-brands fa-java fa-2x"></i></div>
+                        <div class="col-6">
+                            <h6 class="card-title font-weight-bold">Java &nbsp<i
+                                    class="fa-regular fa-circle-check "></i></h6>
+                            <p class="card-text font-weight-bold">
+                            </p>@Java
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-primary" style="border-radius:25px;">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-brands fa-space-awesome fa-2x"></i></div>
+                        <div class="col-6">
+                            <h6 class="card-title font-weight-bold">Relativity Space &nbsp<i
+                                    class="fa-regular fa-circle-check "></i></h6>
+                            @relativityspace
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-primary" style="border-radius:25px;">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-signal fa-2x"></i></div>
+                        <div class="col-6">
+                            <h6 class="card-title font-weight-bold">Virgin Galactic &nbsp<i
+                                    class="fa-regular fa-circle-check "></i></h6>
+                            <p class="card-text font-weight-bold">
+                            </p>@virgingalactic
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-primary" style="border-radius:25px;">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-shuttle-space fa-2x"></i></div>
+                        <div class="col-6">
+                            <h6 class="card-title font-weight-bold">NASA &nbsp<i
+                                    class="fa-regular fa-circle-check "></i></h6>
+                            <p class="card-text font-weight-bold">
+                            </p>@NASA
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-primary" style="border-radius:25px;">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-charging-station fa-2x"></i></div>
+                        <div class="col-6">
+                            <h6 class="card-title font-weight-bold">Tesla &nbsp<i
+                                    class="fa-regular fa-circle-check "></i></h6>
+                            <p class="card-text font-weight-bold">
+                            </p>@Tesla
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-primary" style="border-radius:25px;">Follow</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
