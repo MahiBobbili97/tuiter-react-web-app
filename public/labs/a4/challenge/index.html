@@ -3,165 +3,256 @@
 <head>
   <meta content-Type="text/html" charset=utf-8>
   <title>Title</title>
-  <link href="index.css"
-        rel="stylesheet"/>
+
   <script src="https://kit.fontawesome.com/bb063974cf.js" crossorigin="anonymous"></script>
-  <link href="index.css"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
         rel="stylesheet"/>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+  margin-top:20px;
+  }
+    .pos-fixed {
+  position: fixed;
+  left: 20px;
+  bottom: 90%;
+}
+.dimension-square {
+   width: 75px;
+   height: 75px;
+}
+.form-control {
+    padding-left: 2.375rem;
+}
+.form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+
+}
+.list-group-item{
+border:0px
+}
+</style>
 </head>
 <body>
-
-<div class="class1" >
-  <ul class="leftNav">
-    <li><i class="fa-brands fa-square-twitter"></i></li>
-    <li ><i class="fa-solid fa-house-chimney"></i>&nbspHome
-    </li>
-    <li id="act"><i class="fa-solid fa-hashtag"></i>&nbspExplore
-    </li>
-    <li ><i class="fa-solid fa-bell"></i>&nbspNotifications
-    </li>
-    <li ><i class="fa-solid fa-envelope"></i>&nbsp Messages</li>
-    <li ><i class="fa-solid fa-bookmark"></i>&nbsp Bookmarks</li>
-    <li ><i class="fa-solid fa-list-ul"></i>&nbsp Lists</li>
-    <li ><i class="fa-solid fa-user"></i>&nbsp Profile</li>
-    <li ><i class="fa fa-image"></i>&nbsp More</li>
-  </ul>
+<div class="pos-fixed
+            dimension-square
+         ">
+  <div class="d-block d-sm-none fa-2x">XS</div>
+  <div class="d-none d-sm-block d-md-none fa-2x">S</div>
+  <div class="d-none d-md-block d-lg-none fa-2x">M</div>
+  <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
+  <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
+  <div class="d-none d-xxl-block fa-2x">XXL</div>
 </div>
 
-<div class="class2" >
-  <div class="main">
+<div class="container">
+  <div class="row">
+    <div class="col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2">
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action"><i class="fa-brands fa-square-twitter"></i></a>
+        <a class="list-group-item"><i class="fa-solid fa-house-chimney"></i>&nbsp
+          <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Home</span>
+        </a>
+        <a class="list-group-item list-group-item-action focusNode"><i class="fa-solid fa-hashtag fw-bold"></i>&nbsp
+          <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2 fw-bold">Explore</span>
+        </a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-bell"></i>&nbsp
+          <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Notifications</span>
+        </a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-envelope"></i>&nbsp
+          <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Messages</span></a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-bookmark"></i>&nbsp
+          <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Bookmarks</span>
+        </a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-fire"></i>&nbsp<span
+                class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Top Articles</span></a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-user"></i>&nbsp<span
+                class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Profile</span></a>
+        <a class="list-group-item list-group-item-action"><i class="fa-solid fa-list-ul"></i>&nbsp<span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">More</span></a>
 
-    <!-- Actual search box -->
-    <div class="contain">
-      <form class="nosubmit">
-        <input class="nosubmit" type="search" placeholder="Search...">
-      </form>
-    </div>
-    <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </div><br>
-    <table style="margin-left:16px;">
-      <tr>
-        <td class="wd-topic">Trending in Science</td>
-      </tr>
-      <tr>
-        <td class="wd-title">Starship</td>
-      </tr>
-      <tr>
-        <td class="wd-topic">55.5k Tweets</td>
-      </tr>
-    </table>
-    <br>
-    <div style="position:relative"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
-    <table style="margin-left:16px;">
-      <tr>
-        <td class="wd-topic">Sports . Trending</td>
-      </tr>
-      <tr>
-        <td class="wd-title">Joe Rogan</td>
-      </tr>
-      <tr>
-        <td class="wd-topic">5,218 Tweets</td>
-      </tr>
-    </table>
-    <hr style="border: 1px solid gray;">
-    <div class="wd-Author" style="margin-left:16px;">
-      <p><img class="wd-img" src="images/NYT.jpg" style="width:100px;height:100px;margin-right:16px;"/>
-      <h5 class="wd-title">&nbsp<i class="fa-regular fa-newspaper"></i>&nbspThe New York Times&nbsp<i class="fa-regular fa-circle-check"></i>&nbsp<div style="color:rgb(110, 118, 125);display: inline-block;">&#x2022;&nbspYesterday</div><br><p>Nikole Hannah-Jones was one of several people who spoke to demonstrating staffers on Dec. 8</p></h5>
-      </p>
-      <br>
-      <br>
+        <button class="btn btn-primary mt-3 rounded-pill">Tweet</button>
+      </div>
 
     </div>
-    <hr style="border: 1px solid gray;">
-    <div class="wd-Post" style="margin-left:16px;">
-      <p><img class="wd-img" src="images/covid19.png" style="width:100px;height:100px;margin-right:16px;"/>
-      <h5 class="wd-topic">COVID-19 . LIVE<br><p class="wd-title">COVID-19: News and updates for Massachusetts.</p></h5>
-      </p>
-      <br>
-      <br>
-      <br>
-    </div>
-    <hr style="border: 1px solid gray;">
-    <div class="wd-Author" style="margin-left:16px;">
-      <p><img class="wd-img" src="images/bloomberg.jpg" style="width:100px;height:100px;margin-right:16px;"/>
-      <h5 class="wd-title">&nbsp<i class="fa-solid fa-envelope"></i>&nbspBloomberg Opinion&nbsp<i class="fa-regular fa-circle-check"></i>&nbsp<div style="color:rgb(110, 118, 125);display: inline-block;">&#x2022;&nbspYesterday</div><br><p>Thinking about getting a booster? Read this first.</p></h5>
-      </p>
-      <br>
-      <br>
+    <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10">
+
+      <div class="row">
+        <div class="col-11">
+          <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search Twitter" style="border-radius:25px;background-color: #F0F0F0;">
+          </div>
+        </div>
+
+        <div class="col-1">
+          <a href="explore-settings.html"><i
+                  class="fa-solid fa-gear fa-xl mt-3 text-primary"></i></a>
+        </div>
+
+      </div>
+      <div class="col-xs-12" style="height:10px;"></div>
+
+        <ul class="nav nav-pills navbar-right">
+          <li class="nav-item active" style="border-bottom:2px solid #33ccff;">
+            <a class="nav-link" href="#"><span style="color:black;" class="fw-bold">For you</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span style="color:#808080">Trending</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span style="color:#808080">News</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"><span style="color:#808080">Sports</span></a>
+          </li>
+          <li class="nav-item d-none d-xxl-inline-block d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none ps-2">
+            <a class="nav-link " href="#"><span style="color:#808080">Entertainment</span></a>
+          </li>
+        </ul>
+
+
+      <div class="col-xs-12" style="height:10px;"></div>
+      <div class="card">
+        <div class="position-relative">
+          <img src="images/badminton.jpg"
+               width="100%" class="card-img-top">
+          <h5 class="position-absolute bottom-0 left-0 ms-1 text-white fw-bold" style="margin-bottom:40px;">Tennis Tournament &#x2022; LIVE</h5>
+          <h2 class="position-absolute bottom-0 left-0 ms-1 text-white fw-bold">Australian Open 2023</h2>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="card-body">
+              <div style="position:absolute;margin-left:88%;"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
+              <span style="color:#808080;">Politics &#x2022; Trending</span>
+              <h5 class="card-title font-weight-bold">Seizures</h5>
+              <p class="card-text font-weight-bold">
+                <span style="color:#808080;">4,953 Tweets</span></p>
+
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">#InfinityPool</h5>
+              <p class="card-text font-weight-bold">
+              See the electrifying thriller Infinity Pool in theaters - if you dare<br>
+              <span style="color:#808080;"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbspPromoted by NEON</span></p>
+
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="card-body">
+              <div style="position:absolute;margin-left:88%;"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
+              <span style="color:#808080;">Sports &#x2022; Trending</span>
+              <h5 class="card-title font-weight-bold">RIP Bean</h5>
+              <p class="card-text font-weight-bold">
+              <span style="color:#808080;">18k Tweets</span></p>
+
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="card-body">
+              <div style="position:absolute;margin-left:88%;"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
+              <span style="color:#808080;">Politics &#x2022; Trending</span>
+              <h5 class="card-title font-weight-bold">Durham</h5>
+              <p class="card-text font-weight-bold">
+              <span style="color:#808080;">Trending with <span style="color:blue">Barr, Barr</span></span></p>
+
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="card-body">
+              <div style="position:absolute;margin-left:88%;"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
+              <span style="color:#808080;">Trending in Business and finance</span>
+              <h5 class="card-title font-weight-bold">#DirectedEvolution</h5>
+              <p class="card-text font-weight-bold">
+              <span style="color:#808080;">172k Tweets</span></p>
+
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
 
     </div>
-    <hr style="border: 1px solid gray;">
-    <div style="position:relative"><i class="fa-solid fa-ellipsis wd-img-dots" ></i></div>
-    <table style="margin-left:16px;">
-      <tr>
-        <td class="wd-topic">Trending in United States</td>
-      </tr>
-      <tr>
-        <td class="wd-title">Wonder Bread</td>
-      </tr>
-      <tr>
-        <td class="wd-topic">1,259 Tweets</td>
-      </tr>
-    </table>
-    <hr style="border: 1px solid gray;">
-    <div class="wd-Post" style="margin-left:16px;">
-      <p><img class="wd-img" src="images/Wind.png" style="width:100px;height:100px;margin-right:16px;"/>
-      <h5 class="wd-topic">BOSTON . LIVE<br><p class="wd-title">BOSTON: Wind chill in Boston.</p></h5>
-      </p>
-      <br>
-      <br>
-      <br>
-    </div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-inline-block d-xl-inline-block d-xxl-inline-block" >
 
+      <ul class="list-group">
+        <li class="list-group-item" style="background-color: #F0F0F0; border-top-left-radius: 20px;
+ border-top-right-radius: 20px;">
+          <div class="row">
+            <span class="fw-bold">Who to follow</span>
+          </div></li>
+        <li class="list-group-item" style="background-color: #F0F0F0;">
+          <div class="row align-items-center">
+            <div class="col-2 ps-1 position-relative">
+              <img class="float-left rounded-circle" src="images/nu.jpg" height="45px" width="45px"/></div>
+            <div class="col-6 ps-1">
+              <div class="fw-bold">Northeastern U. <i
+                      class="fa-regular fa-circle-check float-left " style="color:#1175A8;"></i></div>
+              <div class="text-muted">
+                @Northeastern
+              </div>
+
+            </div>
+            <div class="col-4">
+              <button class="btn btn-sm btn-dark w-200 rounded-pill float-end" type="submit" >Follow</button>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item" style="background-color: #F0F0F0;">
+          <div class="row align-items-center">
+            <div class="col-2 ps-1 position-relative">
+              <img class="float-left rounded-circle" src="images/matt.jpg" height="45px" width="45px"/></div>
+            <div class="col-6 ps-1">
+              <div class="fw-bold">Matt Wallace <i
+                      class="fa-regular fa-circle-check float-left " style="color:#1175A8;"></i></div>
+              <div class="text-muted">
+                @mattwallace888
+              </div>
+
+            </div>
+            <div class="col-4">
+              <button class="btn btn-sm btn-dark w-200 rounded-pill float-end" type="submit" >Follow</button>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item" style="background-color: #F0F0F0;">
+          <div class="row align-items-center">
+            <div class="col-2 ps-1 position-relative">
+              <img class="float-left rounded-circle" src="images/pbet.png" height="45px" width="45px"/></div>
+            <div class="col-6 ps-1">
+              <div class="fw-bold">PointsBet SportsB <i
+                      class="fa-regular fa-circle-check float-left " style="color:#DE970B;"></i></div>
+              <div class="text-muted">
+                @PointsBetUSA
+              </div>
+
+            </div>
+            <div class="col-4">
+              <button class="btn btn-sm btn-dark w-200 rounded-pill float-end" type="submit" >Follow</button>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item" style="background-color: #F0F0F0;"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-left:63px;"></i>&nbspPromoted</li>
+        </li>
+        <li class="list-group-item" style="background-color: #F0F0F0;border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;"><span style="color:#0CA6F5;">Show more</span></li>
+      </ul>
+
+    </div>
+  </div>
 </div>
-</div>
-<div class="class3" >
-  <table>
-    <tr>
-      <td><i class="fa-brands fa-java fa-2x"></i></td>
-      <td>nbspJava</td>
-      <td><button class="button">Follow</button></td>
-    </tr>
-    <tr>
-      <td><i class="fa-brands fa-java fa-2x"></i></td>
-      <td>nbspJava</td>
-      <td><button class="button">Follow</button></td>
-    </tr>
-    <tr>
-      <td><i class="fa-brands fa-java fa-2x"></i></td>
-      <td>nbspJava</td>
-      <td><button class="button">Follow</button></td>
-    </tr>
-  </table>
-  <ul class="leftNav">
-  <li>Who to follow</li>
-  <li ><i class="fa-brands fa-java fa-2x"></i>&nbspnbspJava<button class="button">Follow</button><br>
-    @Java
-  </li>
-  <li ><i class="fa-brands fa-java fa-2x"></i>&nbspRelativity Space<button class="button">Follow</button><br>
-    @relativityspace
-  </li>
-  <li ><i class="fa-brands fa-java fa-2x"></i>&nbspVirgin Galactic<button class="button">Follow</button><br>
-    @virgingalactic
-  </li>
-  <li ><i class="fa-brands fa-java fa-2x"></i>&nbspNASA<button class="button">Follow</button><br>
-    @NASA
-  </li>
-  <li ><i class="fa-brands fa-java fa-2x"></i>&nbspTesla<button class="button">Follow</button><br>
-    @Tesla
-  </li>
-  </ul>
-</div>
-
-
-
-
-
-
-
 </body>
 </html>
