@@ -1,8 +1,8 @@
 const PostListItem = (posts) => {
 if (posts.text_head === "") {
 return(`
-         <ul>
-          <div class="row">
+         <ul >
+          <div class="row" >
            <div class="col-1 ps-0 ">
                 <img class="float-left float-start rounded-circle" src=${posts.displayImage} height = 45px width="45px">
            </div>
