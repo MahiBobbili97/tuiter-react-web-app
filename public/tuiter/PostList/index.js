@@ -1,13 +1,13 @@
-import PostItem from "./PostItem.js";
-import PostItems from "./PostItems.js"
+import PostListItem from "./PostListItem.js";
+import posts from "./posts.js"
 const PostList = () => {
    return (`
 
                        ${
-                                              PostItems.map(PostItems => {
-                                                 return(PostItem(PostItems));
+                                              posts.map(posts1 => {
+                                                 return(PostListItem(posts1));
                                               }).join('')
                                            }
 
 `); }
-export default PostItem;
+export default PostList;
