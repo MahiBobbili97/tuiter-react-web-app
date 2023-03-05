@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import CartIcon from '../images/spacex.png';
+import CartIcon from '../images/spacex.jpg';
 import CartIcon2 from '../images/elon.jpg';
 const PostSummaryItem = (
  {
