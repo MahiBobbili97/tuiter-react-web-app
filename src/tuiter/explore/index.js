@@ -2,6 +2,7 @@ import React from "react";
 import PostSummaryList from "../post-summary-list";
 import "./index.css";
 import students from '../images/starx.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,8 +16,7 @@ const ExploreComponent = () => {
          <i className="bi bi-search position-absolute wd-nudge-up"></i>
        </div>
        <div className="col-1">
-         <i className="wd-bottom-4 text-primary float-end bi
-                       bi-gear-fill fs-2 position-relative"></i>
+         <i className="wd-bottom-4 text-primary float-end bi bi-gear-fill fs-2 position-relative"></i>
        </div>
      </div>
      <ul className="nav nav-pills mb-2">
