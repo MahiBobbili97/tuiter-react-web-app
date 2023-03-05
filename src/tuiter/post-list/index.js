@@ -3,7 +3,7 @@ import postsArray from './post.json';
 import PostSummaryItem
   from "./PostListItem";
 
-const PostSummaryList = () => {
+const PostList = () => {
  return(
    <ul className="list-group">
      {
@@ -14,4 +14,4 @@ const PostSummaryList = () => {
    </ul>
  );
 };
-export default PostSummaryList;
+export default PostList;

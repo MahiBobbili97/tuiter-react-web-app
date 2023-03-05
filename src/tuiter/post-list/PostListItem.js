@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import CartIcon from '../images/spacex.jpg';
 import CartIcon2 from '../images/elon.jpg';
+import students from "../images/star.jpg";
 const PostSummaryItem = (
  {
    post = {
@@ -17,13 +18,13 @@ const PostSummaryItem = (
    if (post.retweet === "") {
     return(
     <>
-     <ul >
+     <li >
                <div class="row" >
                 <div class="col-1 ps-0 ">
-                     <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
+                     <img class="float-left float-start rounded-circle" src={CartIcon2} height = "45px" width="45px" />
                 </div>
                 <div class="col-11">
-                   <div class=" fw-bold">{post.userName} <i class="fa-solid fa-circle-check"></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
+                   <div >{post.userName} <i class="bi bi-check-circle-fill"></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
                    <div class="">{post.comment}</div>
 
                          <div class="mt-2 border border-secondary rounded">
@@ -31,7 +32,7 @@ const PostSummaryItem = (
                          <li className="list-group-item">
                                <div className="row">
                                <div class="col-1 ps-0 ">
-                                                    <img class="float-left float-start rounded-circle" src={post.displayImage} height = "45px" width="45px" />
+                                                    <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
                                                </div>
                                  <div className="col-10">
                                    <div>{post.userName_1} . {post.time_1}</div>
@@ -46,23 +47,23 @@ const PostSummaryItem = (
 
                      <ul class="nav   align-items-center nav-justified">
                      <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="fa-regular fa-comment"></i>  {post.comments}</a>
+                       <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="fa-solid fa-retweet"></i>  {post.retweets}</a>
+                       <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-down-up"></i>{post.retweets}</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="fa-regular fa-heart"></i> {post.likes}</a>
+                       <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i>  {post.likes}</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link text-muted " href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i> </a>
+                       <a class="nav-link text-muted " href="#"><i class="bi bi-box-arrow-up"></i> </a>
                      </li>
 
 
                 </ul>
                 </div>
                </div>
-             </ul>
+             </li>
              </>
     );
     }
@@ -70,10 +71,11 @@ const PostSummaryItem = (
     {
     return(
         <>
-         <ul >
+         <li >
+
                    <div class="row" >
                     <div class="col-1 ps-0 ">
-                         <img class="float-left float-start rounded-circle" src={CartIcon2} height = "45px" width="45px" />
+                         <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
                     </div>
                     <div class="col-11">
                        <div class=" fw-bold">{post.userName} <i class="fa-solid fa-circle-check"></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
@@ -81,30 +83,30 @@ const PostSummaryItem = (
 
                              <div class="mt-2 border border-secondary rounded">
 
-                             <img class=" w-100 border-bottom border-secondary rounded " src={post.image}  height = "340px" />
+                             <img class=" w-100 border-bottom border-secondary rounded " src={students}  height = "340px" />
 
                              </div>
                              <br/>
 
                          <ul class="nav   align-items-center nav-justified">
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="fa-regular fa-comment"></i>  {post.comments}</a>
+                           <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="fa-solid fa-retweet"></i>  {post.retweets}</a>
+                           <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-down-up"></i>  {post.retweets}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="fa-regular fa-heart"></i> {post.likes}</a>
+                           <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i> {post.likes}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted " href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i> </a>
+                           <a class="nav-link text-muted " href="#"><i class="bi bi-box-arrow-up"></i> </a>
                          </li>
 
 
                     </ul>
                     </div>
                    </div>
-                 </ul>
+                 </li >
                  </>
         );
     }
