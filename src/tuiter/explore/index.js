@@ -2,6 +2,7 @@ import React from "react";
 import PostSummaryList from "../post-summary-list";
 import "./index.css";
 import students from '../images/starx.jpg';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 const ExploreComponent = () => {
  return(
    <>
@@ -9,7 +10,7 @@ const ExploreComponent = () => {
        <div className="col-11 position-relative">
          <input placeholder="Search Tuiter"
                 className="form-control rounded-pill ps-5"/>
-         <i class="bi bi-search"></i>
+         <i className="bi bi-search position-absolute wd-nudge-up"></i>
        </div>
        <div className="col-1">
          <i className="wd-bottom-4 text-primary float-end bi
