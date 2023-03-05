@@ -27,7 +27,7 @@ const PostSummaryItem = (
                      <img class="float-left float-start rounded-circle" src={CartIcon2} height = "45px" width="45px" />
                 </div>
                 <div class="col-11">
-                   <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00bfff'}}></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
+                   <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i> {post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
                    <div class="">{post.comment}</div>
 
                          <div class="mt-1 border border-secondary rounded">
@@ -38,7 +38,7 @@ const PostSummaryItem = (
                                                     <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
                                                </div>
                                  <div className="col-10">
-                                   <div class=" fw-bold">{post.userName_1} <i class="bi bi-check-circle-fill" style={{color: '#00bfff'}}></i> <span class="text-muted"> {post.handle_1} - {post.time_1} </span> </div>
+                                   <div class=" fw-bold">{post.userName_1} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle_1}<i class="bi bi-dot"></i>{post.time_1}</span> </div>
                                    <div>{post.comment_1}</div>
                                  </div>
 
@@ -83,7 +83,7 @@ const PostSummaryItem = (
                          <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
                     </div>
                     <div class="col-11">
-                       <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00bfff'}}></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
+                       <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
                        <div class="">{post.comment}</div>
 
                              <div class="mt-2 border border-secondary rounded">
@@ -111,7 +111,7 @@ const PostSummaryItem = (
                     </ul>
                     </div>
                    </div>
-                   <span style={{marginLeft: '53px',color:'#00bfff'}}>Show this thread</span>
+                   <span style={{marginLeft: '53px',color:'#00aaff'}}>Show this thread</span>
                  </li >
                  </>
         );
