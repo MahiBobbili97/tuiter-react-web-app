@@ -5,6 +5,8 @@ import CartIcon from '../images/spacex.jpg';
 import CartIcon2 from '../images/elon.jpg';
 import students from "../images/star.jpg";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { faRetweet } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const PostSummaryItem = (
  {
    post = {
@@ -51,7 +53,7 @@ const PostSummaryItem = (
                        <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-down-up"></i>{post.retweets}</a>
+                       <a class="nav-link text-muted" href="#"><FontAwesomeIcon icon={faRetweet} />{post.retweets}</a>
                      </li>
                      <li class="nav-item">
                        <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i>  {post.likes}</a>
@@ -73,7 +75,7 @@ const PostSummaryItem = (
     return(
         <>
          <li className="list-group-item">
-         <span class="text-muted" style={{marginLeft: '23px'}}><i class="bi bi-arrow-down-up"></i> Elon Musk Retweeted</span>
+         <span class="text-muted" style={{marginLeft: '23px'}}><FontAwesomeIcon icon={faRetweet} /> Elon Musk Retweeted</span>
          <br/>
                    <div class="row" >
 
@@ -96,7 +98,7 @@ const PostSummaryItem = (
                            <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-down-up"></i>  {post.retweets}</a>
+                           <a class="nav-link text-muted" href="#"><FontAwesomeIcon icon={faRetweet} />  {post.retweets}</a>
                          </li>
                          <li class="nav-item">
                            <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i> {post.likes}</a>

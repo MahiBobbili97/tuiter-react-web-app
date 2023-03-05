@@ -3,6 +3,8 @@ import PostSummaryList from "../post-summary-list";
 import "./index.css";
 import students from '../images/starx.jpg';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { faRetweet } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ExploreComponent = () => {
  return(
    <>
