@@ -36,7 +36,7 @@ const PostSummaryItem = (
                                                     <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
                                                </div>
                                  <div className="col-10">
-                                   <div class=" fw-bold">{post.userName_1} <i class="bi bi-check-circle-fill" style={{color: '#00bfff'}}></i> {post.time_1}</div>
+                                   <div class=" fw-bold">{post.userName_1} <i class="bi bi-check-circle-fill" style={{color: '#00bfff'}}></i> <span class="text-muted"> {post.handle_1} - {post.time_1} </span> </div>
                                    <div>{post.comment_1}</div>
                                  </div>
 
