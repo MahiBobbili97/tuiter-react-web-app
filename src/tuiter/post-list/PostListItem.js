@@ -1,7 +1,8 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import CartIcon from '../images/Tesla.png';
+import CartIcon from '../images/spacex.png';
+import CartIcon2 from '../images/elon.jpg';
 const PostSummaryItem = (
  {
    post = {
@@ -19,7 +20,7 @@ const PostSummaryItem = (
      <ul >
                <div class="row" >
                 <div class="col-1 ps-0 ">
-                     <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
+                     <img class="float-left float-start rounded-circle" src={CartIcon1} height = "45px" width="45px" />
                 </div>
                 <div class="col-11">
                    <div class=" fw-bold">{post.userName} <i class="fa-solid fa-circle-check"></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
@@ -72,7 +73,7 @@ const PostSummaryItem = (
          <ul >
                    <div class="row" >
                     <div class="col-1 ps-0 ">
-                         <img class="float-left float-start rounded-circle" src={post.displayImage} height = "45px" width="45px" />
+                         <img class="float-left float-start rounded-circle" src={CartIcon2} height = "45px" width="45px" />
                     </div>
                     <div class="col-11">
                        <div class=" fw-bold">{post.userName} <i class="fa-solid fa-circle-check"></i> <span class="text-muted"> {post.handle} - {post.time} </span> </div>
