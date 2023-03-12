@@ -21,9 +21,19 @@ const PostSummaryItem = (
    }
     }
    ) => {
+const [num,changeNum] = useState(post.likes);
+const incrementNum = () => {
 
+    if(document.getElementById(post._id ).style.color=='red')
+    {changeNum(num-1);
+    document.getElementById(post._id ).style.color='gray'
+    }
+    else
+    {changeNum(num+1);
+    document.getElementById(post._id).style.color='red'
+    }
 
-
+  }
 if (post.liked) {
     return(
         <>
@@ -50,9 +60,7 @@ if (post.liked) {
                          </li>
                          <li class="nav-item">
 
-                           <a class="nav-link text-muted" href="#"><i style={{color: 'red'}} class="bi-heart-fill"></i> {post.likes}</a>
-
-
+                           <a class="nav-link text-muted" href="#"><i style={{color: 'red'}} class="bi-heart-fill" id={post._id} onClick={incrementNum}></i> {num}</a>
 
 
                          </li>
@@ -94,7 +102,7 @@ else
                                 <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {post.retuits}</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link text-muted" href="#"><i class="bi-heart-fill"></i> {post.likes}</a>
+                                 <a class="nav-link text-muted" href="#"><i style={{color: 'gray'}} class="bi-heart-fill" id={post._id} onClick={incrementNum}></i> {num}</a>
 
                               </li>
 
