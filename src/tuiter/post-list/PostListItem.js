@@ -7,6 +7,9 @@ import students from "../images/star.jpg";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {useSelector} from "react-redux";
+import { useState } from 'react';
+import {useDispatch} from "react-redux";
 const PostSummaryItem = (
  {
    post = {
@@ -18,103 +21,119 @@ const PostSummaryItem = (
    }
     }
    ) => {
-   if (post.retweet === "") {
-    return(
-    <>
-     <li className="list-group-item">
-               <div class="row" >
-                <div class="col-1 ps-0 ">
-                     <img class="float-left float-start rounded-circle" src={CartIcon2} height = "45px" width="45px" />
-                </div>
-                <div class="col-11">
-                   <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i> {post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
-                   <div class="">{post.comment}</div>
-
-                         <div class="mt-1 border border-secondary rounded">
-
-                         <li className="list-group-item">
-                               <div className="row">
-                               <div class="col-1 ps-0 ">
-                                                    <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
-                                               </div>
-                                 <div className="col-10">
-                                   <div class=" fw-bold">{post.userName_1} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle_1}<i class="bi bi-dot"></i>{post.time_1}</span> </div>
-                                   <div>{post.comment_1}</div>
-                                 </div>
-
-                               </div>
-                              </li>
-
-                         </div>
-                         <br/>
-
-                     <ul class="nav   align-items-center nav-justified">
-                     <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
-                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><FontAwesomeIcon icon={faRetweet} />{post.retweets}</a>
-                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i>  {post.likes}</a>
-                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link text-muted " href="#"><i class="bi bi-box-arrow-up"></i> </a>
-                     </li>
 
 
-                </ul>
-                </div>
-               </div>
-             </li>
-             </>
-    );
-    }
-    else
-    {
+
+if (post.liked) {
     return(
         <>
          <li className="list-group-item">
-         <span class="text-muted" style={{marginLeft: '23px'}}><FontAwesomeIcon icon={faRetweet} /> Elon Musk Retweeted</span>
+
          <br/>
                    <div class="row" >
 
                     <div class="col-1 ps-0 ">
-                         <img class="float-left float-start rounded-circle" src={CartIcon} height = "45px" width="45px" />
+                         <img class="float-left float-start rounded-circle" src={`/images/${post.image}`} height = "45px" width="45px" />
                     </div>
                     <div class="col-11">
                        <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
-                       <div class="">{post.comment}</div>
+                       <div class="">{post.tuit}</div>
 
-                             <div class="mt-2 border border-secondary rounded">
 
-                             <img class=" w-100 border-bottom border-secondary rounded " src={students}  height = "340px" />
-
-                             </div>
-                             <br/>
 
                          <ul class="nav   align-items-center nav-justified">
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.comments}</a>
+                           <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.replies}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><FontAwesomeIcon icon={faRetweet} />  {post.retweets}</a>
+                           <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {post.retuits}</a>
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted" href="#"><i class="bi bi-heart"></i> {post.likes}</a>
+
+                           <a class="nav-link text-muted" href="#"><i style={{color: 'red'}} class="bi-heart-fill"></i> {post.likes}</a>
+
+
+
+
                          </li>
                          <li class="nav-item">
-                           <a class="nav-link text-muted " href="#"><i class="bi bi-box-arrow-up"></i> </a>
+                           <a class="nav-link text-muted " href="#"><i class="bi bi-share"></i> </a>
                          </li>
 
 
                     </ul>
                     </div>
                    </div>
-                   <span style={{marginLeft: '53px',color:'#00aaff'}}>Show this thread</span>
+
                  </li >
                  </>
         );
+}
+else
+    {return(
+             <>
+              <li className="list-group-item">
+
+              <br/>
+                        <div class="row" >
+
+                         <div class="col-1 ps-0 ">
+                              <img class="float-left float-start rounded-circle" src={`/images/${post.image}`} height = "45px" width="45px" />
+                         </div>
+                         <div class="col-11">
+                            <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
+                            <div class="">{post.tuit}</div>
+
+
+
+                              <ul class="nav   align-items-center nav-justified">
+                              <li class="nav-item">
+                                <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {post.replies}</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {post.retuits}</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link text-muted" href="#"><i class="bi-heart-fill"></i> {post.likes}</a>
+
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link text-muted " href="#"><i class="bi bi-share"></i> </a>
+                              </li>
+
+
+                         </ul>
+                         </div>
+                        </div>
+
+                      </li >
+                      </>
+             );
     }
    };
+   function LikeButton() {
+     const [isLiked, setIsLiked] = useState(false);
+     const [likeCount, setLikeCount] = useState(0);
+
+     const handleLikeClick = () => {
+       if (isLiked) {
+         setIsLiked(false);
+         setLikeCount(likeCount - 1);
+       } else {
+         setIsLiked(true);
+         setLikeCount(likeCount + 1);
+       }
+     };
+
+     return (
+       <div>
+         <button onClick={handleLikeClick}>
+           <span className={isLiked ? "red-heart" : "empty-heart"}></span>
+           Like
+         </button>
+         <span>{likeCount} likes</span>
+       </div>
+     );
+   }
    export default PostSummaryItem;
