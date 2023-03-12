@@ -67,7 +67,7 @@ if (post.liked) {
                          </li>
                          <li class="nav-item">
 
-                           <a class="nav-link text-muted" href="#"><i style={{color: 'red'}} class="bi-heart-fill" id={post._id} onClick={incrementNum}></i> {num}</a>
+                           <a class="nav-link text-muted" href="#" onClick={incrementNum}><i style={{color: 'red'}} class="bi-heart-fill" id={post._id} ></i> {num}</a>
 
 
                          </li>
@@ -110,7 +110,7 @@ else
                                 <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {post.retuits}</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link text-muted" href="#"><i style={{color: 'gray'}} class="bi-heart-fill" id={post._id} onClick={incrementNum}></i> {num}</a>
+                                 <a class="nav-link text-muted" href="#" onClick={incrementNum}><i style={{color: 'gray'}} class="bi-heart-fill" id={post._id} ></i> {num}</a>
 
                               </li>
 

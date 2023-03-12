@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import {Routes, Route} from "react-router";
 import HomeComponent from "./home";
+import ProfileComponent from "./profile";
 import whoReducer
   from "./reducers/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
@@ -36,6 +37,7 @@ function Tuiter() {
                    <Routes>
                             <Route path="home"    element={<HomeComponent/>}/>
                             <Route path="explore" element={<ExploreComponent/>}/>
+                            <Route path="profile" element={<ProfileComponent/>}/>
                    </Routes>
 
            </div>
