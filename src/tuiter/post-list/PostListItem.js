@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {useSelector} from "react-redux";
 import { useState } from 'react';
 import {useDispatch} from "react-redux";
+import {deleteTuit} from "../tuits/tuits-reducer";
 const PostSummaryItem = (
  {
    post = {
@@ -34,6 +35,11 @@ const incrementNum = () => {
     }
 
   }
+const dispatch = useDispatch();
+const deleteTuitHandler = (id) => {
+  dispatch(deleteTuit(id));
+}
+
 if (post.liked) {
     return(
         <>
@@ -46,7 +52,8 @@ if (post.liked) {
                          <img class="float-left float-start rounded-circle" src={`/images/${post.image}`} height = "45px" width="45px" />
                     </div>
                     <div class="col-11">
-                       <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
+                       <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i className="bi bi-x-lg float-end"
+                                                                                                                                                                                                                               onClick={() => deleteTuitHandler(post._id)}></i></div>
                        <div class="">{post.tuit}</div>
 
 
@@ -89,7 +96,8 @@ else
                               <img class="float-left float-start rounded-circle" src={`/images/${post.image}`} height = "45px" width="45px" />
                          </div>
                          <div class="col-11">
-                            <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i class="bi bi-three-dots" style={{float: "right"}}></i></div>
+                            <div class=" fw-bold">{post.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{post.handle}<i class="bi bi-dot"></i>{post.time} </span> <i className="bi bi-x-lg float-end"
+                                                                                                                                                                                                                                    onClick={() => deleteTuitHandler(post._id)}></i></div>
                             <div class="">{post.tuit}</div>
 
 
