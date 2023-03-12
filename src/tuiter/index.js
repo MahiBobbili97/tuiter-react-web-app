@@ -12,9 +12,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import {Routes, Route} from "react-router";
 import HomeComponent from "./home";
+import whoReducer
+  from "./reducers/who-reducer";
+import { configureStore }
+  from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+const store = configureStore(
+  {reducer: {who: whoReducer}});
+
 function Tuiter() {
 
  return(
+ <Provider store={store}>
  <div class="container">
  <Nav/>
        <div class="row">
@@ -40,7 +49,7 @@ function Tuiter() {
 
 
 
-
+</Provider>
  )
 }
 export default Tuiter
