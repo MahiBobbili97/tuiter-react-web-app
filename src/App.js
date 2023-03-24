@@ -3,8 +3,12 @@ import HelloWorld from "./labs/a6/hello-world";
 import Tuiter from "./tuiter";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+
 function App() {
   return (
+
   <BrowserRouter>
     <div class="container" >
     <Routes>
@@ -15,6 +19,7 @@ function App() {
     </Routes>
     </div>
    </BrowserRouter>
+
   );
 }
 

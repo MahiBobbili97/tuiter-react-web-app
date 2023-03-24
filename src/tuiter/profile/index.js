@@ -1,15 +1,13 @@
 import React from "react";
-import PostList from "../post-list";
-
+import UserProfile from "./userprofile";
+import {useState} from "react";
+import "./index.css";
 const ProfileComponent = () => {
  return(
    <>
-   <h4 style = {
 
-    {color: 'black'}}>Profile</h4>
+    <UserProfile/>
 
-
-     <PostList/>
    </>
  );
 };
