@@ -18,12 +18,12 @@ import EditProfileComponent from "./editprofile"
 import whoReducer
   from "./reducers/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
-import { configureStore }
+import { configureStore }   from '@reduxjs/toolkit';
+import userReducer from "./tuits/user-reducer";
 
-  from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
 const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer}});
+  {reducer: {who: whoReducer, tuits: tuitsReducer,user: userReducer}},);
 
 function Tuiter() {
 

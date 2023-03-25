@@ -1,0 +1,16 @@
+[
+  {
+    "_id": 123,
+    "firstName": "Mahi",
+    "lastName": "Bobbili",
+    "bannerimage": "",
+    "profilepic": "",
+    "handle": "@mahiBobbili",
+    "bio": "Cricketer",
+    "location":"Boston, MA",
+    "dob":"17 April 1997",
+    "dateJoined":"March 2009",
+    "followers":"200",
+    "following":"3300"
+  }
+]

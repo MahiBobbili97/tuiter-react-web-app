@@ -5,10 +5,11 @@ import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-
+import store from "./redux/store";
+console.log(store);
 function App() {
   return (
-
+<Provider store={store}>
   <BrowserRouter>
     <div class="container" >
     <Routes>
@@ -19,7 +20,7 @@ function App() {
     </Routes>
     </div>
    </BrowserRouter>
-
+</Provider>
   );
 }
 
