@@ -21,14 +21,13 @@ console.log({userInfo});
        size: "20px",
      }
  const handleSaveButton = () => {
- dispatch(updateUser({
-                                                        ...profile.user,
+ dispatch(updateUser({...profile.user,
                                                         firstName:firstName,
                                                         lastName: lastName,
                                                         bio: bio,
                                                         location: location,
                                                         website: website,
-                                                        dob:dob
+                                                        dob:dob,
                                                     }));
  };
 return(
@@ -99,8 +98,8 @@ return(
                                       <div className ="position-relative mt-4">
                                           <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Date of Birth</span>
                                           <input
-                                              defaultValue="2018-07-22"
-                                              onChange={(e) => setdob(e.target.user.value)}
+                                              defaultValue="1967-04-12"
+                                              onChange={(e) => setdob(e.target.value)}
                                               className="form-control ps-2 pt-4"
                                               type = "date"/>
                                       </div>
