@@ -19,6 +19,11 @@
        flex: 1 1 auto;
        padding: 1.25rem
    }
+   .btn-edit{
+   float:right;
+   margin-top: 72px;
+   color:black;
+   }
 
    .pro-img {
        margin-top: -80px;

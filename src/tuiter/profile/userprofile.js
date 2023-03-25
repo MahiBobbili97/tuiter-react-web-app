@@ -21,16 +21,14 @@ return(
 
 
 <div class="padding">
-         <button style = {
 
-          {float:'right'}}><Link to="/tuiter/editprofile" >
-                             <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Edit Profile</span >
-                           </Link></button>
-                           <br/><br/>
     <div class="col-md-14">
-        <div class="card"> <img class="card-img-top" src="https://i.imgur.com/qzHxByk.jpeg" alt="Card image cap"/>
+        <div class="card"> <img class="card-img-top" src="https://i.imgur.com/hLBXx8z.jpeg" alt="Card image cap"/>
             <div class="card-body little-profile">
-                <div class="pro-img"><img src="https://i.imgur.com/sI9rKfE.jpeg" alt="user"/></div>
+                <div class="pro-img"><img src="https://i.imgur.com/PFOlDFb.jpeg" alt="user"/><button  class="btn-edit btn btn-light"><Link to="/tuiter/editprofile"  class="list-group-item">
+                                                                                                                                                                                                                             <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Edit Profile</span >
+                                                                                                                                                                                                                           </Link></button></div>
+
                 <h3 class="m-b-0"><span>{profile.firstName} {profile.lastName}</span ></h3><br/>
                 <h6 class="m-b-0"><span>{profile.handle}</span ></h6><br/>
                 <span style = {{color : 'black '}}>{profile.bio}</span><br/><br/>

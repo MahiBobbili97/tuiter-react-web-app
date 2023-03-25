@@ -66,6 +66,11 @@
        border-radius: 60px;
        padding: 7px 18px
    }
+      .btn-edit{
+      float:right;
+      margin-top: 72px;
+      color:black;
+      }
 
    .m-t-20 {
        margin-top: 20px
