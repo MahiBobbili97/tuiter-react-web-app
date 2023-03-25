@@ -9,33 +9,101 @@ const userInfo= useSelector(state => state.user)
 console.log({userInfo});
 
  const [profile,setProfile]=useState(userInfo);
+ const [firstName, setfirstName] = useState(userInfo.user.firstName)
+ const [lastName, setlastName] = useState(userInfo.user.lastName)
+ const [bio, setBio] = useState(userInfo.user.bio)
+ const [location, setlocation] = useState(userInfo.user.location)
+ const [website, setwebsite] = useState(userInfo.user.website)
+ const [dob, setdob] = useState(userInfo.user.dob)
  const dispatch = useDispatch();
+ const style1 = {
+       color: "black",
+       size: "20px",
+     }
  const handleSaveButton = () => {
- dispatch(updateUser(profile.user));
+ dispatch(updateUser({
+                                                        ...profile.user,
+                                                        firstName:firstName,
+                                                        lastName: lastName,
+                                                        bio: bio,
+                                                        location: location,
+                                                        website: website,
+                                                        dob:dob
+                                                    }));
  };
 return(
    <>    <div class="padding">
-
+<div className="row align-items-center justify-content-start pb-1">
+                <div className="col-auto">
+                    <Link to="/tuiter/profile" className="btn" title="cancel" >
+                        <i className="bi bi-x-lg" />
+                    </Link>
+                </div>
+                <div className="col-10">
+                    <span className="fs-5 fw-bold" style={style1}>Edit Profile</span>
+                    <Link to="/tuiter/profile" className="btn btn-dark btn-sm rounded-pill position-relative float-end px-3 fw-bold" onClick={handleSaveButton}>Save</Link>
+                </div>
+            </div>
 
           <div class="col-md-14">
-          <button class="btn btn-dark" style={{float:'right'}} onClick={handleSaveButton}><Link to="/tuiter/profile" class="list-group-item">
-                                                <span class="d-none d-xxl-inline-block d-xl-inline-block d-lg-none ps-2">Save</span >
-                                              </Link></button><br/><br/>
-              <div class="card"> <img class="card-img-top" src="https://i.imgur.com/hLBXx8z.jpeg" alt="Card image cap"/>
+
+              <div class="card">  <img class="card-img-top" src="https://i.imgur.com/hLBXx8z.jpeg" alt="Card image cap"/>
+
                   <div class="card-body little-profile">
-                      <div class="pro-img"><img src="https://i.imgur.com/PFOlDFb.jpeg" alt="user"/></div>
-                      <h3 class="m-b-0"><input value={profile.user.firstName}  onChange={(e)=>setProfile({...profile,firstName:e.target.value,})} size="7"/><input value={profile.user.lastName} onChange={(e)=>setProfile({...profile,lastName:e.target.value,})} size="7"/><br/></h3><br/>
-                      <h6 class="m-b-0"><input value={profile.user.handle} onChange={(e)=>setProfile({...profile,handle:e.target.value,})}   size="7"/></h6><br/>
+				   <div class="pro-img"><img src="https://i.imgur.com/PFOlDFb.jpeg" alt="user"/></div>
+                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >First Name</span>
+                                          <input
+                                              defaultValue={profile.user.firstName}
+                                              onChange={(e) => setfirstName(e.target.value)}
+                                              className="form-control ps-2 pt-4"
+                                              />
+                                      </div>
 
+                                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Last Name</span>
+                                          <input
+                                              defaultValue={profile.user.lastName}
+                                              onChange={(e) => setlastName(e.target.value)}
+                                              className="form-control ps-2 pt-4"
+                                              />
+                                      </div>
 
+                                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Bio</span>
+                                          <input
+                                              defaultValue={profile.user.bio}
+                                              onChange={(e) => setBio(e.target.value)}
+                                              className="form-control ps-2 pt-4"
+                                              />
+                                      </div>
 
-                     <textarea rows="4" cols="70" value={profile.user.bio} onChange={(e)=>setProfile({...profile,bio:e.target.value,})}/>
-<br/><br/>
-                      <span style = {{color : 'black '}}><i class="bi bi-geo-alt"></i> <input value={profile.user.location}  onChange={(e)=>setProfile({...profile,location:e.target.value,})} size="7"/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <span style = {{color : 'black '}}><i class="bi bi-balloon"></i> <input type="date" id="start" name="trip-start" value={profile.user.dateOfBirth} onChange={(e)=>setProfile({...profile,dateOfBirth:e.target.value,})}/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <span style = {{color : 'black '}}><i class="bi bi-calendar-week"></i> Joined <input type="date" id="start" name="trip-start" value={profile.user.dateJoined} onChange={(e)=>setProfile({...profile,dateJoined:e.target.value,})}/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
-                      <span style = {{color : 'black '}}><b><input value={profile.user.followingCount}  size="3" onChange={(e)=>setProfile({...profile,followingCount:e.target.value,})}/></b>Following</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <span style = {{color : 'black '}}><b><input value={profile.user.followersCount}  size="3" onChange={(e)=>setProfile({...profile,followersCount:e.target.value,})}/></b>Following</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Location</span>
+                                          <input
+                                              defaultValue={profile.user.location}
+                                              onChange={(e) => setlocation(e.target.value)}
+                                              className="form-control ps-2 pt-4"
+                                             />
+                                      </div>
+
+                                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Website</span>
+                                          <input
+                                              defaultValue={profile.user.website}
+                                              onChange={(e) => setwebsite(e.target.value)}
+                                              className="form-control ps-2 pt-4"
+                                              />
+                                      </div>
+
+                                      <div className ="position-relative mt-4">
+                                          <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Date of Birth</span>
+                                          <input
+                                              defaultValue="2018-07-22"
+                                              onChange={(e) => setdob(e.target.user.value)}
+                                              className="form-control ps-2 pt-4"
+                                              type = "date"/>
+                                      </div>
                   </div>
               </div>
           </div>
