@@ -11,7 +11,7 @@ console.log({userInfo});
  const [profile,setProfile]=useState(userInfo);
  const dispatch = useDispatch();
  const handleSaveButton = () => {
- dispatch(updateUser(profile));
+ dispatch(updateUser(profile.user));
  };
 return(
    <>    <div class="padding">
