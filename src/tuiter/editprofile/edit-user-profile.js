@@ -49,7 +49,7 @@ return(
               <div class="card">  <img class="card-img-top" src="https://i.imgur.com/hLBXx8z.jpeg" alt="Card image cap"/>
 
                   <div class="card-body little-profile">
-				   <div class="pro-img"><img src="https://i.imgur.com/PFOlDFb.jpeg" alt="user"/></div>
+				   <div class="pro-img"><img src="../images/virat1.jpeg" alt="user"/></div>
                       <div className ="position-relative mt-4">
                                           <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >First Name</span>
                                           <input
