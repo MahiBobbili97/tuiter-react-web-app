@@ -14,7 +14,16 @@ console.log({userInfo});
  const [bio, setBio] = useState(userInfo.user.bio)
  const [location, setlocation] = useState(userInfo.user.location)
  const [website, setwebsite] = useState(userInfo.user.website)
- const [dob, setdob] = useState(userInfo.user.dob)
+ const [dateOfBirth, setdateOfBirth] = useState(userInfo.user.dateOfBirth)
+ const formatDateYYYY_MM_dd = (inputDate) => {
+         return new Date(inputDate).toISOString().split('T')[0]
+     }
+ const formatDateMM_dd_yyyy = (inputDate) => {
+        console.log(inputDate);
+         const [year, month, day] = inputDate.split("-")
+         console.log(year + '-' + month+ '-' + day);
+         return year + '-' + month+ '-' + day;
+     }
  const dispatch = useDispatch();
  const style1 = {
        color: "black",
@@ -27,7 +36,7 @@ console.log({userInfo});
                                                         bio: bio,
                                                         location: location,
                                                         website: website,
-                                                        dob:dob,
+                                                        dateOfBirth:dateOfBirth,
                                                     }));
  };
 return(
@@ -49,7 +58,7 @@ return(
               <div class="card">  <img class="card-img-top" src="https://i.imgur.com/hLBXx8z.jpeg" alt="Card image cap"/>
 
                   <div class="card-body little-profile">
-				   <div class="pro-img"><img src="../images/virat1.jpeg" alt="user"/></div>
+				   <div class="pro-img"><img src="https://i.imgur.com/PFOlDFb.jpeg" alt="user"/></div>
                       <div className ="position-relative mt-4">
                                           <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >First Name</span>
                                           <input
@@ -98,8 +107,8 @@ return(
                                       <div className ="position-relative mt-4">
                                           <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Date of Birth</span>
                                           <input
-                                              defaultValue="1967-04-12"
-                                              onChange={(e) => setdob(e.target.value)}
+                                              defaultValue={formatDateYYYY_MM_dd(profile.user.dateOfBirth)}
+                                              onChange={(e) => setdateOfBirth(formatDateMM_dd_yyyy(e.target.value))}
                                               className="form-control ps-2 pt-4"
                                               type = "date"/>
                                       </div>
