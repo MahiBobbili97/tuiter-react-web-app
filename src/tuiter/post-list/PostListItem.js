@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import CartIcon from '../images/spacex.jpg';
@@ -7,10 +7,11 @@ import students from "../images/star.jpg";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {useSelector} from "react-redux";
+import {useDispatch,useSelector} from "react-redux";
 import { useState } from 'react';
-import {useDispatch} from "react-redux";
-import {deleteTuit} from "../tuits/tuits-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
+import {findTuitsThunk}
+  from "../../services/tuits-thunks";
 const PostSummaryItem = (
  {
    post = {
@@ -37,7 +38,7 @@ const incrementNum = () => {
   }
 const dispatch = useDispatch();
 const deleteTuitHandler = (id) => {
-  dispatch(deleteTuit(id));
+  dispatch(deleteTuitThunk(id));
 }
 
 if (post.liked) {

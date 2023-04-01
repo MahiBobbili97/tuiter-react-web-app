@@ -23,7 +23,7 @@ import userReducer from "./tuits/user-reducer";
 
 import {Provider} from "react-redux";
 const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer,user: userReducer}},);
+  {reducer: {who: whoReducer, tuitsData: tuitsReducer,user: userReducer}},);
 
 function Tuiter() {
 

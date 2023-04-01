@@ -1,5 +1,5 @@
 import React from "react";
-import PostList from "../post-list";
+import TuitList from "../tuit-list";
 import WhatsHappening from "./whats-happening";
 import "./index.css";
 const HomeComponent = () => {
@@ -10,7 +10,7 @@ const HomeComponent = () => {
     {color: 'black'}}>Home</h4>
     <WhatsHappening/>
 
-     <PostList/>
+     <TuitList/>
    </>
  );
 };
