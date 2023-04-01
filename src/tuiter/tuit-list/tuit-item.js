@@ -57,41 +57,24 @@ const TuitListItem = (
                  <>
                   <li className="list-group-item">
 
-                  <br/>
-                            <div class="row" >
+                               <br/>
+                                         <div class="row" >
 
-                             <div class="col-1 ps-0 ">
-                                  <img class="float-left float-start rounded-circle" src={`../images/${tuit.image}`} height = "45px" width="45px" />
-                             </div>
-                             <div class="col-11">
-                                <div class=" fw-bold">{tuit.username} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
-                                                                                                                                                                                                                                        onClick={() => deleteTuitHandler(tuit._id)}></i></div>
-                                <div class="">{tuit.tuit}</div>
-
-
-
-                                  <ul class="nav   align-items-center nav-justified">
-                                  <li class="nav-item">
-                                    <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {tuit.replies}</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {tuit.retuits}</a>
-                                  </li>
-                                  <li class="nav-item">
-                                     <a class="nav-link text-muted" href="#" onClick={incrementNum}><i style={{color: 'gray'}} class="bi-heart-fill" id={tuit._id} ></i> {num}</a>
-
-                                  </li>
-
-                                  <li class="nav-item">
-                                    <a class="nav-link text-muted " href="#"><i class="bi bi-share"></i> </a>
-                                  </li>
+                                          <div class="col-1 ps-0 ">
+                                               <img class="float-left float-start rounded-circle" src={`../images/${tuit.image}`} height = "45px" width="45px" />
+                                          </div>
+                                          <div class="col-11">
+                                             <div class=" fw-bold">{tuit.username} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
+                                                                                                                                                                                                                                                     onClick={() => deleteTuitHandler(tuit._id)}></i></div>
+                                             <div class="">{tuit.tuit}</div>
 
 
-                             </ul>
-                             </div>
-                            </div>
 
-                          </li >
+                                               <TuitStats tuit={tuit}/>
+                                          </div>
+                                         </div>
+
+                                       </li >
                           </>
                  );
         }
