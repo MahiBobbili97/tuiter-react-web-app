@@ -35,10 +35,10 @@ const TuitListItem = (
                        <div class="row" >
 
                         <div class="col-1 ps-0 ">
-                             <img class="float-left float-start rounded-circle" src={`/images/${tuit.image}`} height = "45px" width="45px" />
+                             <img class="float-left float-start rounded-circle" src={`../images/${tuit.image}`} height = "45px" width="45px" />
                         </div>
                         <div class="col-11">
-                           <div class=" fw-bold">{tuit.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
+                           <div class=" fw-bold">{tuit.username} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
                                                                                                                                                                                                                                    onClick={() => deleteTuitHandler(tuit._id)}></i></div>
                            <div class="">{tuit.tuit}</div>
 
@@ -79,10 +79,10 @@ const TuitListItem = (
                             <div class="row" >
 
                              <div class="col-1 ps-0 ">
-                                  <img class="float-left float-start rounded-circle" src={`/images/${tuit.image}`} height = "45px" width="45px" />
+                                  <img class="float-left float-start rounded-circle" src={`../images/${tuit.image}`} height = "45px" width="45px" />
                              </div>
                              <div class="col-11">
-                                <div class=" fw-bold">{tuit.userName} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
+                                <div class=" fw-bold">{tuit.username} <i class="bi bi-check-circle-fill" style={{color: '#00aaff'}}></i> <span class="text-muted">{tuit.handle}<i class="bi bi-dot"></i>{tuit.time} </span> <i className="bi bi-x-lg float-end"
                                                                                                                                                                                                                                         onClick={() => deleteTuitHandler(tuit._id)}></i></div>
                                 <div class="">{tuit.tuit}</div>
 
