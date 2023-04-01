@@ -44,25 +44,7 @@ const TuitListItem = (
 
 
 
-                             <ul class="nav   align-items-center nav-justified">
-                             <li class="nav-item">
-                               <a class="nav-link text-muted" href="#"><i class="bi bi-chat"></i>  {tuit.replies}</a>
-                             </li>
-                             <li class="nav-item">
-                               <a class="nav-link text-muted" href="#"><i class="bi bi-arrow-repeat"></i>  {tuit.retuits}</a>
-                             </li>
-                             <li class="nav-item">
-
-                               <a class="nav-link text-muted" href="#" onClick={incrementNum}><i style={{color: 'red'}} class="bi-heart-fill" id={tuit._id} ></i> {num}</a>
-
-
-                             </li>
-                             <li class="nav-item">
-                               <a class="nav-link text-muted " href="#"><i class="bi bi-share"></i> </a>
-                             </li>
-
-
-                        </ul>
+                             <TuitStats tuit={tuit}/>
                         </div>
                        </div>
 

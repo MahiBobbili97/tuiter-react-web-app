@@ -17,6 +17,7 @@ const TuitStats = ({tuit}) => {
     }
 
     return (
+
         <div className="row ms-1 mt-3 text-secondary">
             <div className="col-2">
                 <Link to={""} className="nav-link">
@@ -31,7 +32,7 @@ const TuitStats = ({tuit}) => {
                 </Link>
             </div>
 
-            <div className="col-2 justify-content-center">
+            <div className="col-3 justify-content-center">
                 <Link onClick={changeLiked} className="nav-link" to={""}>
                     {
                         !liked &&
@@ -84,7 +85,7 @@ const TuitStats = ({tuit}) => {
 
             <div className="col-2">
                 <Link to={""} className="nav-link">
-                    <i className="bi bi-upload"></i>
+                    <i class="bi bi-share"></i>
                 </Link>
             </div>
         </div>
